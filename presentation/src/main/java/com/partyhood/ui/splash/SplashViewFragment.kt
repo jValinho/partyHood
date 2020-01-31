@@ -15,8 +15,6 @@ import org.kodein.di.generic.instance
 
 class SplashViewFragment : BaseFragment<SplashState, SplashViewModel, SplashNavigator.Navigation>() {
 
-    override val inputStateKey: String?
-        get() = null
 
     override val viewModelSeed: SplashViewModel by instance()
 

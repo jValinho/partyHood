@@ -15,12 +15,12 @@ import com.partyhood.R
 class SplashViewActivity : BaseActivity() {
 
 
-    override fun getToolbarTitle(): String? {
-        return STRING_EMPTY
+    override fun provideFixedToolbarTitle(): String? {
+        return "Hola"
     }
 
-    override fun createActivity(savedInstanceState: Bundle?) {
-        super.createActivity(savedInstanceState)
+    override fun onCreateActivity(savedInstanceState: Bundle?) {
+        super.onCreateActivity(savedInstanceState)
         hideToolbar()
     }
 

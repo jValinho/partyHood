@@ -14,9 +14,8 @@ import com.partyhood.navigation.SplashNavigator
  
 class SplashViewModel : BaseViewModel<SplashState, SplashNavigator.Navigation>() {
 
-    override fun createInitialViewState(): SplashState {
-        return SplashState()
-    }
+
+    override val initialViewState: SplashState = SplashState()
 
 
 }

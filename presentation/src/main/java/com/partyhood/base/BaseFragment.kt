@@ -41,7 +41,7 @@ abstract class BaseFragment<S : EmaBaseState, VM : BaseViewModel<S, NS>, NS : Em
 //        }
     }
 
-    override fun onStateLoading(data: EmaExtraData) {
+    override fun onStateAlternative(data: EmaExtraData) {
         onLoading(data)
     }
 
@@ -51,7 +51,7 @@ abstract class BaseFragment<S : EmaBaseState, VM : BaseViewModel<S, NS>, NS : Em
     }
 
     /**
-     * We create this abstract function if we want to appy default behaviours in [onStateNormal],[onStateError],[onStateLoading]
+     * We create this abstract function if we want to appy default behaviours in [onStateNormal],[onStateError],[onStateAlternative]
      * @param data
      */
     abstract fun onLoading(data: EmaExtraData)
@@ -60,7 +60,7 @@ abstract class BaseFragment<S : EmaBaseState, VM : BaseViewModel<S, NS>, NS : Em
 
     abstract fun onError(error: Throwable): Boolean
 
-    override fun onNavigation(navigation: EmaNavigationState) {
+    override fun onNavigation(navigation: EmaNavigationState?) {
         super.onNavigation(navigation)
         context?.let {
             val hideKeyboard: InputMethodManager = it.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
