@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "445216885412",
+    "firebase_url": "https://partyhood-192b4.firebaseio.com",
+    "project_id": "partyhood-192b4",
+    "storage_bucket": "partyhood-192b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445216885412:android:30bce4d9e4572ee55cf431",
+        "android_client_info": {
+          "package_name": "com.partyhood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445216885412-q10gl6klepqigasslm12hka7bg0kclte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMlm5MJRjZZN4aYl1r4M1lO_Qx_d5iiEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445216885412-q10gl6klepqigasslm12hka7bg0kclte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
