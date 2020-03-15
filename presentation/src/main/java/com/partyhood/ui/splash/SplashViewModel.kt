@@ -1,7 +1,10 @@
 package com.partyhood.ui.splash
 
 import com.partyhood.base.BaseViewModel
-import com.partyhood.navigation.SplashNavigator
+import com.partyhood.domain.usecases.GetDelaySplashUseCase
+import com.partyhood.navigation.MainNavigator
+import kotlinx.coroutines.delay
+
 
 /**
  *
@@ -9,16 +12,22 @@ import com.partyhood.navigation.SplashNavigator
  * @author <a href="mailto:jorgevguerra@hotmail.com">Jorge Valiño Guerra</a>
  */
  
-class SplashViewModel : BaseViewModel<SplashState, SplashNavigator.Navigation>() {
+class SplashViewModel(private val getDelaySplashUseCase: GetDelaySplashUseCase
+) : BaseViewModel<SplashState, MainNavigator.Navigation>() {
 
+
+    override fun onStartFirstTime(statePreloaded: Boolean) {
+
+    }
 
     override val initialViewState: SplashState = SplashState()
 
     fun showSplashAndNavigate() {
         executeUseCase {
-            getDelaySplashUseCase.execute(5000).await()
+
+            getDelaySplashUseCase.execute(5000)
             delay(5000)
-            navigate(SplashNavigator.Navigation.FromSplashToHome)
+            navigate(MainNavigator.Navigation.FromSplashToHome)
         }
     }
 

@@ -67,7 +67,7 @@ configurations {
 dependencies {
     implementation project(":domain")
 
-    implementation 'com.github.carlosmateo89.Ema:ema-android:2.0.0'
+    implementation 'com.github.carlosmateo89.Ema:ema-android:2.2.0'
 
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])

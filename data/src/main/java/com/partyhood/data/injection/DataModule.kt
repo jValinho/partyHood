@@ -1,5 +1,7 @@
 package com.partyhood.data.injection
 
+import com.carmabs.ema.core.concurrency.AsyncManager
+import com.carmabs.ema.core.concurrency.DefaultAsyncManager
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -24,7 +26,7 @@ fun generateDataModule() = Kodein.Module(name = "DataModule") {
 
 //    bind<VersionManager>() with singleton { AppVersionManager() }
 //
-//    bind<AsyncManager>() with singleton { DefaultAsyncManager() }
+    bind<AsyncManager>() with singleton { DefaultAsyncManager() }
 //
 //    bind<LocationManager>() with singleton { ContextLocationManager(instance()) }
 //

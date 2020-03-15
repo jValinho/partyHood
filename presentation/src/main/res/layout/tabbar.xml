@@ -17,7 +17,7 @@
         android:id="@+id/ib_tabbar_map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/point_map"
+        android:src="@drawable/ic_tabbar_point_map"
         app:layout_constraintEnd_toStartOf="@+id/ib_tabbar_search"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ib_tabbar_home" />

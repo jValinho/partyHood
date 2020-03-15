@@ -11,3 +11,5 @@ gradlew
 *.ser
 
 gradle/wrapper/gradle-wrapper\.jar
+
+partyHood.zip

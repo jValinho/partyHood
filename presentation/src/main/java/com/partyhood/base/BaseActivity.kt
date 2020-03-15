@@ -36,7 +36,7 @@ abstract class BaseActivity : EmaToolbarFragmentActivity() {
 
     override fun injectActivityModule(kodein: Kodein.MainBuilder): Kodein.Module = injectionActivityModule(this)
 
-    override fun getLayout(): Int = R.layout.activity_base
+    override val layoutId: Int get() = R.layout.activity_base
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

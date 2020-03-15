@@ -1,9 +1,11 @@
 package com.partyhood.inject
 
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.NavController
 import com.carmabs.ema.core.dialog.EmaDialogProvider
 import com.partyhood.base.BaseActivity
 import com.partyhood.dialog.simple.SimpleDialogProvider
+import com.partyhood.navigation.MainNavigator
 import com.partyhood.ui.utils.KODEIN_TAG_DIALOG_SIMPLE
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
@@ -23,8 +25,7 @@ fun injectionActivityModule(activity: BaseActivity) = Kodein.Module(name = "Acti
 
     //NAVIGATOR//
 
-//    bind<VerificationNavigator>() with singleton { VerificationNavigator(instance(), instance()) }
-
+    bind<MainNavigator>() with singleton { MainNavigator(instance(), instance()) }
 
 
     //ACTIVITY//
@@ -37,6 +38,12 @@ fun injectionActivityModule(activity: BaseActivity) = Kodein.Module(name = "Acti
     bind<FragmentManager>() with provider { activity.supportFragmentManager }
 
     bind<EmaDialogProvider>(tag = KODEIN_TAG_DIALOG_SIMPLE) with provider { SimpleDialogProvider(instance()) }
+
+
+    //NAV CONTROLLER//
+
+    bind<NavController>() with singleton { activity.navController }
+
 
 
 }

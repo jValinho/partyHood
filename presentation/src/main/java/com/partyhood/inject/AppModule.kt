@@ -1,6 +1,7 @@
 package com.partyhood.inject
 
 import android.app.Application
+import com.partyhood.domain.usecases.GetDelaySplashUseCase
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -27,7 +28,7 @@ fun generateAppModule(app: Application) = Kodein.Module(name = "AppModule") {
 
     //USE CASES//
 
-//    bind<RequestLocationAndGetFullAddressUseCase>() with provider { RequestLocationAndGetFullAddressUseCase(instance(), instance()) }
+    bind<GetDelaySplashUseCase>() with provider { GetDelaySplashUseCase() }
 
 
 }

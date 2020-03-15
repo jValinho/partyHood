@@ -13,6 +13,7 @@ import com.partyhood.R
  */
 
 class SplashViewActivity : BaseActivity() {
+    override val navGraph: Int get() = R.navigation.navigation_splash
 
 
     override fun provideFixedToolbarTitle(): String? {
@@ -22,10 +23,6 @@ class SplashViewActivity : BaseActivity() {
     override fun onCreateActivity(savedInstanceState: Bundle?) {
         super.onCreateActivity(savedInstanceState)
         hideToolbar()
-    }
-
-    override fun getNavGraph(): Int {
-        return R.navigation.navigation_splash
     }
 
 }
